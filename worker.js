@@ -1,8 +1,8 @@
 // 反代目标网站.
 const upstream = 'github.com'; // 这里填写你要反代的主站域名
 
-// 反代目标网站的移动版. 如果未设置则默认与 upstream 相同
-const upstream_mobile = 'github.com'; // 这里填写你要反代的移动版域名，如无可与主站相同
+// 反代目标网站的移动版
+const upstream_mobile = 'github.com'; // 这里填写你要反代的移动版域名
 
 // 访问区域黑名单（按需设置）.
 const blocked_region = [''];
