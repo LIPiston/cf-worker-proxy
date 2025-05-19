@@ -20,16 +20,14 @@
 
 2. **配置代理参数**
 
-    在 `worker.js` 顶部设置你的目标代理地址，例如：
+    在 `worker.js` 顶部手动设置你的目标代理地址，例如：
 
     ```js
     // 反代目标网站
-    const upstream = UPSTREAM_DOMAIN || "github.com";
+    const upstream = "github.com"; // 这里填写你要反代的主站域名
     // 反代目标网站的移动版
-    const upstream_mobile = UPSTREAM_MOBILE_DOMAIN || "github.com";
+    const upstream_mobile = "github.com"; // 这里填写你要反代的移动版域名，如无可与主站相同
     ```
-    
-    你可以通过设置环境变量 `UPSTREAM_DOMAIN` 和 `UPSTREAM_MOBILE_DOMAIN`（如果没有设置则默认使用 `UPSTREAM_DOMAIN` 的值） 来动态指定代理目标，无需直接修改代码。
     
     如需自定义黑名单、替换规则等，也可在对应变量处修改：
     - `blocked_region`：访问区域黑名单
@@ -40,7 +38,6 @@
 
     - 点击“保存并部署”按钮。
     - 访问分配给你的 Worker 域名，即可通过 Worker 实现反向代理。
-
 
 ## 注意事项
 
